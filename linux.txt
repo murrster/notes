@@ -1,1 +1,32 @@
 # Linux
+
+Data Transfer of files from old Kali box to new Kali box 
+ 
+ 
+Zip up all files you will be migrating into a folder called keep 
+
+		zip –r keep.zip keep 
+
+Start a Python Web Server for data transfer 
+
+python3 –m http.server 80 (alias w) 
+
+Obtain the IP address of the old Kali box 
+
+	alias n 
+
+Visit this IP address from your new Kali box 
+
+		192.168.XXX.XXX 
+
+From the webpage click on keep.zip folder to download the transferred files onto new Kali box 
+
+ 
+
+Unzip the files onto the Kali Desktop 
+
+		cd /home/kali/Desktop (alias kd) 
+
+		unzip keep.zip		 
+
+Use the (alias cl) to list the folder onto your Desktop directory 
