@@ -1,0 +1,15 @@
+#Kerberoasting is a post-exploitation attack which attempts to crack the password of a service account within Active Directory (AD)
+#In such an attack the adversary is masquerarding as an account user with a service principal name (SPN) requests a ticket, which contains an encrypted password, or Kerberos.
+#An SPN is an attribute that ties a service to a user account within the AD
+#The adversary then works offline to crack the password hash, often using brute force techniques
+#Once the plaintext credentials of the service account are exposed, the adversary possesses user credentials that they can use to impersonate the account owner
+#In doing so, they appear to be an approved and legitiate user and have unfettered access to any systems, assests or networks granted to the compromised account
+
+#Kerberoasting attacks exploit a combination of weak encryption techniques and insecure or low-quality passwords. These attacks typically follow:
+     1) An attacker who has already compromised the account of a domian user authenticates the account and launches a new session
+     2) The attacker, who appears to be a valid domain user, requests a Kerberos service ticket from the ticket granting service (TGS) using tools, GhostPack's Rubeus or GetUserSPNs.py
+     3) The adversary receives a ticket from the Kerberos KDC. The ticket contains a hashed version of the account's password or Kerberos
+     4) The adversary captures the TGS ticket and Kerberos from memory and takes it offline
+     5) The hacker attempts to crack the SPN value or service credential hash to obtain the service accounts' plaintext password using brute force tools like Hashcat or JohnTheRipper
+     6) With the service account password in hand, the adversary attempts to log in to the service account and is granted access to any service, network or system associated with the compromised account
+     7) The attacker is then able to steal data, escalate privileges or set backdoors on the network to ensure future access
