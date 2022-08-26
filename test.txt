@@ -1,0 +1,15 @@
+mousepad test.txt &
+
+PUSH REQUEST
+
+git add test.txt
+git commit -am 'first commit'
+git push
+
+
+DELETE REQUEST
+
+git rm test.txt
+git commit -am 'first delete'
+git push
+
