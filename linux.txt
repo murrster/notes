@@ -30,3 +30,23 @@ Unzip the files onto the Kali Desktop
 		unzip keep.zip		 
 
 Use the (alias cl) to list the folder onto your Desktop directory 
+
+------------------------------------------------------------------------------------
+
+Remove old team.pub and team server files in a single command
+
+rm team*   (team.pub | team)
+
+Move the team keys to the root directory
+
+     mv /home/kali/Desktop/team* .
+
+change permissions of team key to 600
+
+     chmod 600 team
+     
+copy recursively the keys ... to the keep folder
+
+     cp -R .ssh /home/kali/Desktop/keep/ssh
+     
+     
