@@ -33,7 +33,7 @@ Use the (alias cl) to list the folder onto your Desktop directory
 
 ------------------------------------------------------------------------------------
 
-Remove old team.pub and team server files in a single command
+Delete old keys team.pub (public key) and team (private key) to the server in a single command
 
 rm team*   (team.pub | team)
 
@@ -41,7 +41,7 @@ Move the team keys to the root directory
 
      mv /home/kali/Desktop/team* .
 
-change permissions of team key to 600
+change permissions of team private key to 600 (only the owner can makes changes to the private key)
 
      chmod 600 team
      
@@ -49,4 +49,12 @@ copy recursively the keys ... to the keep folder
 
      cp -R .ssh /home/kali/Desktop/keep/ssh
      
+-------------------------------------------------------------------------------------
+
+SSH KEYS
      
+make sure that the config file is identical for both root and userland ssh directories
+
+/home/kali/.ssh/config
+
+/root/.ssh/config
