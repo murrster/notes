@@ -1,1 +1,9 @@
-# Web
+#Web
+
+#XSS
+<script>alert(1)</script>
+
+#XSS-Reflected
+
+#XSS-(DOM-Based)
+

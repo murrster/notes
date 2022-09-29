@@ -1,1 +1,67 @@
 # Git
+
+Git Creating a GitHub Repo on Kali Linux 
+ 
+ 
+Add your public SSH key to the GitHub web console 
+     GitHub > Edit Profile > Account Settings > SSH Keys > Add SSH Key 
+     Enter a Title > paste in public key > Add Key 
+     ssh -T git@github.com 
+     yes 
+ 
+Set GitHub variables 
+     git config --global user.name "<your name>" 
+     git config --global user.email <your email> 
+ 
+Create a new repo and initialize the folder 
+     mkdir test 
+     cd test 
+     git init 
+ 
+Add a new file with some content 
+     mousepad linux.txt 
+ 
+Add file to git 
+     git add linux.txt 
+ 
+Set remote origin 
+     git remote set-url origin git@github.com:<username>/<repo>.git 
+     Example: git remote set-url origin git@github.com:murrster/notes.git 
+ 
+Make your first commit and merge the changed files 
+     git commit –am 'first commit' 
+
+     git push --set-upstream origin main 
+     git push 
+ 
+If you made changes via the web console, pull new changes down to your local repo 
+     git pull 
+ 
+Clone your existing repo 
+     git clone git@github.com:murrster/notes 
+     git remote set-url origin git@github.com:murrster/notes.git 
+ 
+See what you are on 
+     git branch 
+ 
+Checkout a new branch 
+     git checkout <branch> 
+ 
+Push all changes in the new branch to the 'main' branch 
+     git merge main 
+     git push origin <current branch> -f 
+     
+     
+     
+PUSH REQUEST
+
+git add test.txt
+git commit -am 'first commit'
+git push
+
+
+DELETE REQUEST
+
+git rm test.txt
+git commit -am 'first delete'
+git push

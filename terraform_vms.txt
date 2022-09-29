@@ -1,0 +1,12 @@
+#Team Server (Remote-in)
+ssh ts
+
+File > New Tab
+
+#Redirector #1 (Remote-in)
+ssh r1
+
+File > New Tab
+
+#Redirector #2 (Remote-in)
+ssh r2
