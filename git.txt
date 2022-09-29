@@ -65,3 +65,15 @@ DELETE REQUEST
 git rm test.txt
 git commit -am 'first delete'
 git push
+
+
+
+MERGE BRANCH BACK TO MAIN (WHEN THERE IS A CONFLICT)
+
+git pull
+
+git commit -am 'rebase'
+
+git push
+
+git pull
