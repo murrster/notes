@@ -1,0 +1,3 @@
+FREEZE SHELLCODE OBFUSCATOR
+
+./Freeze -I ../beacon.bin -O test.exe -encrypt
