@@ -11,3 +11,48 @@ source .zshrc
 w
 
 Should now see your IP when starting the webserver
+
+
+
+Windows
+-------
+139 NetBIOS
+389 LDAP
+445 Server Message Block (SMB)
+636 S/LDAP
+3389 Remote Desktop Protocol (RDP)
+
+Linux
+-----
+22 SSH
+
+Web Servers
+-----------
+80 HTTP
+443 HTTPS
+8000 HTTP alt
+8080 HTTP alt
+8443 HTTPS alt
+
+Databases
+---------
+1443 MS-SQL
+1532 Oracle
+3306 MySQL
+5432 PostgreSQL
+
+Nmap
+----
+Perform an nmap scan for databases using the following options:
+
+-Pn    Don't perform discovery (don't ping the target)
+-n     Don't resolve DNS (makes your scan faster)
+-T4    Aggressive timing. See addtional timing options:
+         paranoid (0), sneaky (1), polite (2), normal (3), aggressive (4), and insane (5)
+--open Show only open ports (2 dashes)
+
+-p <port> Scan specific port numbers
+-iL <file> Use a file for your targets (IP, range, or CIDR. One per line.)
+-oA <file> Output the scan in all formats (grepable, nmap, normal, XML)
+
+nmap -Pn -n -T4 --open -p 1433,1532,3306,5432 -iL targets.txt -oA databases
