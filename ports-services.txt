@@ -1,0 +1,13 @@
+PORTS && SERVICES
+
+mousepad .zshrc &
+
+alias w="echo $ip ; python3 -m http.server 80"
+alias w2="echo $ip ; python3 -m http.server 8000"
+
+Save
+source .zshrc
+
+w
+
+Should now see your IP when starting the webserver
