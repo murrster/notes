@@ -100,3 +100,15 @@ cd /home/kali/Desktop (alias kd)
 unzip keep.zip
 
 Use the (alias cl) to list the folder onto your Desktop directory
+
+--------------------------------------------------------------------------------------
+
+NEVER store files within the root of your file system, always store in home directory of Kali (userland)
+
+mv Payloads/ /home/kali/
+
+cd home/kali/Payloads
+
+sudo chown -R kali:kali Payloads  //changes file ownership permissions to drwxr-xr-x
+
+
