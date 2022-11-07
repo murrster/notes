@@ -1,1 +1,22 @@
+Domain Fronting - technique leveraged by threat actors to use high reputation domains to disguise C2 callbacks/traffic from both the user and security tool sets. Needs to have a good domain. Org hosting malware will blacklist domain. Allows attack to bypass DNS whitelisting / blacklisting. As soon as EDR finds out that evil.com is hosting malware it's going to blacklist it. Will craft the malware sample in a way that it's going to send a request to nytimes.com but host data will point to evil.com. Attacker can bypass DNS blacklisting/whitelisting.
+
+Virtual hosting is a method for hosting multiple domain names on a single server. This allows one server to share its resources, such as memory and processer cycles, without requiring all services provided to sue the same host name.
+
+Privacy data. Ensure web traffic is hidden/anonomized form the portions of the network when passing through restricted domains.
+
+Robots.txt file
+
+Priviledge Escalation
+
+Lateral Movement
+
+Pivoting
+
+SSH keys/config files
+
+DLL hijacking 
+
+Setting up C2 infrastructure weith all VPNs being locked down
+
+How do you know website is hosted by AWS, MS, Apache (robots.txt file)?
 
