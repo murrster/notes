@@ -8,13 +8,24 @@ Robots.txt file
 
 Priviledge Escalation
 
-Lateral Movement
+Lateral Movement - CS provides 3 strategies for executing beacons/code/commands on remote targets:
+1) jump: [method][target][listener] psexec64/winrm64
+2) remote-exec: [method][target][command] psexec/winrm
+3) powershell --> execute-assembly C:\Seatbelt.exe OSInfo -ComputerName=web  
+
+Windows Remote Management - SMB Beacon is excellent choice when moving laterally; SMB protocol used extensively in Windows env, traffic blends in very well
+
+psexec/psexe64 cmds work by uploading a service binary to the target system, then creating and starting a Windows service to execute that binary. Beacons executed this way run as SYSTEM.
+
+psexec_psh executes a PowerShell one-liner: jump psexec_psh web smb
 
 Pivoting
 
 SSH keys/config files
 
 DLL hijacking 
+
+Reverse port forwarding
 
 Setting up C2 infrastructure weith all VPNs being locked down
 
